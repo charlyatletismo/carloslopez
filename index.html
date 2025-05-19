@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carlos Emanuel Lopez - Presidente Comunal</title>
+  <link rel="icon" href="evento2-1.png" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: linear-gradient(135deg, #6B3FA0, #9C6ADE);
+      color: white;
+      text-align: center;
+    }
+    header {
+      padding: 2rem 1rem;
+    }
+    header img {
+      width: 280px; /* AUMENTADO */
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin: 0.5rem 0;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin: 0.25rem 0;
+    }
+    .slogan {
+      color: #FFD700;
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .hero {
+      background: white;
+      color: #4B0082;
+      border-radius: 12px;
+      margin: 2rem auto;
+      padding: 1rem;
+      width: 90%;
+      max-width: 600px;
+    }
+    .hero img {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+    .formulario {
+      margin: 2rem auto;
+      width: 90%;
+      max-width: 500px;
+      background: #ffffff22;
+      padding: 1.5rem;
+      border-radius: 10px;
+    }
+    .formulario input, .formulario textarea, .formulario button {
+      width: 100%;
+      padding: 0.7rem;
+      margin: 0.5rem 0;
+      border-radius: 6px;
+      border: none;
+      font-size: 1rem;
+    }
+    .formulario button {
+      background: #FFD700;
+      color: #4B0082;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .redes a {
+      margin: 0 0.5rem;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+    footer {
+      margin: 2rem 0;
+      font-size: 0.9rem;
+    }
+    .contador-texto {
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-top: 1rem;
+      color: #ffffff;
+    }
+    .contador {
+      font-size: 2rem;
+      margin: 0.5rem 0 1rem;
+      font-weight: bold;
+      color: #FFD700;
+    }
+    .wsp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: #FFF;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+  </style>
+  <script>
+    function actualizarContador() {
+      const fechaObjetivo = new Date('June 29, 2025 08:00:00').getTime();
+      const ahora = new Date().getTime();
+      const diferencia = fechaObjetivo - ahora;
+
+      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+      const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+      document.getElementById("contador").innerHTML = `${dias}d ${horas}h ${minutos}m ${segundos}s`;
+    }
+
+    setInterval(actualizarContador, 1000);
+  </script>
+</head>
+<body>
+  <header>
+    <img src="lla.png" alt="Logo La Libertad Avanza">
+    <div class="slogan">¡Viva la Libertad carajo!</div>
+    <h1>Carlos Emanuel Lopez</h1>
+    <h2>Presidente Comunal - Empalme</h2>
+  </header>
+
+  <div class="contador-texto">Estamos muy cerca de hacer historia</div>
+  <div class="contador" id="contador"></div>
+
+  <div class="hero">
+    <img src="charly.jpeg" alt="Carlos Lopez">
+    <h2>Votá este 29 de junio</h2>
+  </div>
+
+  <div class="formulario">
+    <form action="https://formspree.io/f/xwpozvaw" method="POST">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo electrónico" required>
+      <textarea name="mensaje" rows="4" placeholder="Tu mensaje o propuesta"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <div class="redes">
+    <a href="https://www.facebook.com/CharlyUBX/" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/charly_emm/" target="_blank">Instagram</a>
+    <a href="https://www.instagram.com/lalibertadavanza_empalme/" target="_blank">Instagram Partido</a>
+    <a href="https://www.youtube.com/@LalibertadavanzaEmpalme" target="_blank">YouTube</a>
+    <a href="https://www.tiktok.com/@lalibertadavanza_empalme" target="_blank">TikTok</a>
+  </div>
+
+  <a href="https://wa.me/5493400667370" class="wsp-float" target="_blank">💬</a>
+
+  <footer>
+    © 2025 Carlos Emanuel Lopez - La Libertad Avanza Empalme
+  </footer>
+</body>
+</html>
